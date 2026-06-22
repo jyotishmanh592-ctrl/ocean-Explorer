@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marine Creatures — Depths Unknown</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<canvas id="bubbleCanvas"></canvas>
+
+<div class="site-content">
+
+  <!-- NAVBAR -->
+  <nav class="navbar-du">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">🌊</div>
+      <span class="nav-logo-text">DEPTHS <span>UNKNOWN</span></span>
+    </a>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="zones.html">Ocean Zones</a></li>
+      <li><a href="animals.html" class="active">Creatures</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="zones.html" class="nav-cta">Explore Zones</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background: radial-gradient(ellipse 70% 80% at 50% 110%, rgba(0,53,102,0.4) 0%, transparent 70%);">
+    <div class="container text-center">
+      <div class="eyebrow justify-content-center">Deep-Sea Fauna Database</div>
+      <h1 class="section-heading" style="font-size:clamp(3rem,8vw,6rem);">MARINE CREATURES</h1>
+      <p class="section-body mx-auto text-center" style="max-width:520px;">
+        Extraordinary animals evolved for worlds of crushing pressure, total darkness,
+        and freezing cold. Each one a masterpiece of survival.
+      </p>
+    </div>
+  </section>
+
+  <!-- SEARCH BAR -->
+  <div class="container mt-5">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        class="search-input"
+        id="searchInput"
+        placeholder="Search by name or zone... (e.g. Anglerfish, Midnight Zone)"
+        autocomplete="off"
+      />
+    </div>
+  </div>
+
+  <!-- CREATURE GRID — injected by script.js → initAnimalsPage() -->
+  <section class="section-du" style="padding-top:2rem;">
+    <div class="container">
+      <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4" id="creaturesGrid"></div>
+      <div class="no-results" id="noResults">
+        <p>🔍 No creatures found matching your search.<br>
+        <span style="font-size:0.8rem;">Try searching "squid", "shark", or "midnight"</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-du">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-logo">DEPTHS <span>UNKNOWN</span></div>
+          <p class="footer-tagline">Discover the mysteries hidden beneath the waves.</p>
+          <span class="footer-badge">🌊 Deep Sea Edition</span>
+        </div>
+        <div class="col-6 col-lg-2 offset-lg-2">
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="zones.html">Ocean Zones</a></li>
+            <li><a href="animals.html">Creatures</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Creatures</div>
+          <ul class="footer-links">
+            <li><a href="#">Giant Squid</a></li>
+            <li><a href="#">Anglerfish</a></li>
+            <li><a href="#">Goblin Shark</a></li>
+            <li><a href="#">Dumbo Octopus</a></li>
+            <li><a href="#">Vampire Squid</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2025 Depths Unknown.</span>
+        <span class="footer-badge">200,000+ marine species 🌊</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- CREATURE MODAL -->
+<div class="modal fade modal-du" id="creatureModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content position-relative">
+
+      <button class="btn-close-du" id="modalClose" aria-label="Close">✕</button>
+      <img id="modalImg" src="" alt="" class="modal-hero-img"/>
+
+      <div class="modal-body-du">
+        <div class="modal-name" id="modalName"></div>
+        <div class="modal-sci"  id="modalSci"></div>
+
+        <div class="modal-stats">
+          <div class="modal-stat"><div class="ms-label">Size</div><div class="ms-value" id="modalSize"></div></div>
+          <div class="modal-stat"><div class="ms-label">Weight</div><div class="ms-value" id="modalWeight"></div></div>
+          <div class="modal-stat"><div class="ms-label">Depth</div><div class="ms-value" id="modalDepth"></div></div>
+          <div class="modal-stat"><div class="ms-label">Speed</div><div class="ms-value" id="modalSpeed"></div></div>
+        </div>
+
+        <div class="modal-sec-label">About</div>
+        <p class="modal-text" id="modalAbout"></p>
+
+        <div class="modal-sec-label">Diet</div>
+        <div class="diet-tags" id="modalDiet"></div>
+
+        <div class="modal-sec-label">Did You Know</div>
+        <div class="fact-box" id="modalFact"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

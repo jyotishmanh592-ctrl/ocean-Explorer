@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ocean Zones — Depths Unknown</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<canvas id="bubbleCanvas"></canvas>
+
+<div class="site-content">
+
+  <!-- NAVBAR -->
+  <nav class="navbar-du">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">🌊</div>
+      <span class="nav-logo-text">DEPTHS <span>UNKNOWN</span></span>
+    </a>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="zones.html" class="active">Ocean Zones</a></li>
+      <li><a href="animals.html">Creatures</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="animals.html" class="nav-cta">Creatures</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container text-center">
+      <div class="eyebrow justify-content-center">The Layers of the Deep</div>
+      <h1 class="section-heading" style="font-size:clamp(3rem,8vw,6rem);">OCEAN ZONES</h1>
+      <p class="section-body mx-auto text-center" style="max-width:560px;">
+        The ocean is not a single environment — it is five distinct worlds, stacked on top of one another,
+        each with its own rules, its own light, its own extraordinary life.
+      </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════════════════════════════════════
+       ZONE 1 — SUNLIGHT ZONE
+  ════════════════════════════════════ -->
+  <section class="zone-section" id="sunlight">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6 reveal">
+          <img src="./sunlight-zone.jpeg"
+               alt="Sunlight Zone" class="zone-big-img"/>
+        </div>
+
+        <div class="col-lg-6 reveal delay-2">
+          <div class="eyebrow">Zone One</div>
+          <div class="zone-page-name">SUNLIGHT ZONE</div>
+          <div class="zone-page-depth">Epipelagic · 0 m – 200 m</div>
+          <p class="zone-page-desc">
+            The sunlight zone is the ocean's most productive layer. Sunlight penetrates this region with enough
+            intensity for photosynthesis, making it the engine of almost all marine life on Earth.
+            Coral reefs, kelp forests, dolphins, tuna, and sea turtles all call this layer home.
+            It accounts for less than 5% of the ocean's total volume yet supports the vast majority of known marine species.
+          </p>
+
+          <div class="zone-data-grid">
+            <div class="zdchip"><div class="cl">Depth</div><div class="cv">0 – 200 m</div></div>
+            <div class="zdchip"><div class="cl">Temperature</div><div class="cv">17°C – 28°C</div></div>
+            <div class="zdchip"><div class="cl">Light</div><div class="cv">Full sunlight</div></div>
+            <div class="zdchip"><div class="cl">Pressure</div><div class="cv">1 – 20 atm</div></div>
+          </div>
+
+          <div class="eyebrow mb-2">Creatures Found Here</div>
+          <div class="creature-tags">
+            <span class="ctag">Dolphins</span><span class="ctag">Sea Turtles</span>
+            <span class="ctag">Tuna</span><span class="ctag">Sharks</span>
+            <span class="ctag">Jellyfish</span><span class="ctag">Coral</span>
+            <span class="ctag">Manta Rays</span><span class="ctag">Clownfish</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ZONE 2 — TWILIGHT ZONE -->
+  <section class="zone-section" id="twilight">
+    <div class="container">
+      <div class="row align-items-center g-5 flex-lg-row-reverse">
+
+        <div class="col-lg-6 reveal">
+          <img src="./twilight-zone.jpeg "
+               alt="Twilight Zone" class="zone-big-img"/>
+        </div>
+
+        <div class="col-lg-6 reveal delay-2">
+          <div class="eyebrow">Zone Two</div>
+          <div class="zone-page-name">TWILIGHT ZONE</div>
+          <div class="zone-page-depth">Mesopelagic · 200 m – 1,000 m</div>
+          <p class="zone-page-desc">
+            The twilight zone exists in a permanent dim blue half-light — too dark for photosynthesis,
+            but not yet fully black. Every night, billions of animals migrate upward toward the surface
+            to feed under cover of darkness, then retreat to this zone before dawn. It is the largest
+            daily animal migration on Earth, happening invisibly beneath the waves.
+          </p>
+
+          <div class="zone-data-grid">
+            <div class="zdchip"><div class="cl">Depth</div><div class="cv">200 – 1,000 m</div></div>
+            <div class="zdchip"><div class="cl">Temperature</div><div class="cv">4°C – 17°C</div></div>
+            <div class="zdchip"><div class="cl">Light</div><div class="cv">Faint blue, dim</div></div>
+            <div class="zdchip"><div class="cl">Pressure</div><div class="cv">20 – 100 atm</div></div>
+          </div>
+
+          <div class="eyebrow mb-2">Creatures Found Here</div>
+          <div class="creature-tags">
+            <span class="ctag">Lanternfish</span><span class="ctag">Barreleye Fish</span>
+            <span class="ctag">Goblin Shark</span><span class="ctag">Hatchetfish</span>
+            <span class="ctag">Swordfish</span><span class="ctag">Bristlemouth</span>
+            <span class="ctag">Viperfish</span><span class="ctag">Firefly Squid</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ZONE 3 — MIDNIGHT ZONE -->
+  <section class="zone-section" id="midnight">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6 reveal">
+          <img src="./midnight-zone.jpeg"
+               alt="Midnight Zone" class="zone-big-img"/>
+        </div>
+
+        <div class="col-lg-6 reveal delay-2">
+          <div class="eyebrow">Zone Three</div>
+          <div class="zone-page-name">MIDNIGHT ZONE</div>
+          <div class="zone-page-depth">Bathypelagic · 1,000 m – 4,000 m</div>
+          <p class="zone-page-desc">
+            Total darkness. No sunlight reaches this zone — not a single photon. The only light here
+            is bioluminescent: produced by the animals themselves. Pressure is 40 to 400 times that of the
+            surface atmosphere. Temperatures hover near freezing. Yet life thrives here in extraordinary,
+            alien forms — anglerfish luring prey with glowing appendages, giant squid hunting in the dark.
+          </p>
+
+          <div class="zone-data-grid">
+            <div class="zdchip"><div class="cl">Depth</div><div class="cv">1,000 – 4,000 m</div></div>
+            <div class="zdchip"><div class="cl">Temperature</div><div class="cv">2°C – 4°C</div></div>
+            <div class="zdchip"><div class="cl">Light</div><div class="cv">Zero — total darkness</div></div>
+            <div class="zdchip"><div class="cl">Pressure</div><div class="cv">100 – 400 atm</div></div>
+          </div>
+
+          <div class="eyebrow mb-2">Creatures Found Here</div>
+          <div class="creature-tags">
+            <span class="ctag">Anglerfish</span><span class="ctag">Giant Squid</span>
+            <span class="ctag">Fangtooth Fish</span><span class="ctag">Sperm Whale</span>
+            <span class="ctag">Colossal Squid</span><span class="ctag">Gulper Eel</span>
+            <span class="ctag">Black Dragonfish</span><span class="ctag">Stoplight Loosejaw</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ZONE 4 — ABYSSAL ZONE -->
+  <section class="zone-section" id="abyssal">
+    <div class="container">
+      <div class="row align-items-center g-5 flex-lg-row-reverse">
+
+        <div class="col-lg-6 reveal">
+          <img src="./abyssal-zone.jpeg"
+               alt="Abyssal Zone" class="zone-big-img"/>
+        </div>
+
+        <div class="col-lg-6 reveal delay-2">
+          <div class="eyebrow">Zone Four</div>
+          <div class="zone-page-name">ABYSSAL ZONE</div>
+          <div class="zone-page-depth">Abyssopelagic · 4,000 m – 6,000 m</div>
+          <p class="zone-page-desc">
+            The abyssal zone covers the vast flat plains of the deep ocean floor — nearly 60% of Earth's surface.
+            Here, pressure exceeds 600 atmospheres, temperatures approach −1°C, and food is so scarce that
+            creatures may go weeks between meals. Life is sustained largely by "marine snow" — a constant
+            slow drift of dead organic matter falling from the zones above.
+          </p>
+
+          <div class="zone-data-grid">
+            <div class="zdchip"><div class="cl">Depth</div><div class="cv">4,000 – 6,000 m</div></div>
+            <div class="zdchip"><div class="cl">Temperature</div><div class="cv">−1°C – 4°C</div></div>
+            <div class="zdchip"><div class="cl">Light</div><div class="cv">None</div></div>
+            <div class="zdchip"><div class="cl">Pressure</div><div class="cv">400 – 600 atm</div></div>
+          </div>
+
+          <div class="eyebrow mb-2">Creatures Found Here</div>
+          <div class="creature-tags">
+            <span class="ctag">Dumbo Octopus</span><span class="ctag">Sea Cucumber</span>
+            <span class="ctag">Brittle Stars</span><span class="ctag">Abyssal Grenadier</span>
+            <span class="ctag">Foraminifera</span><span class="ctag">Polychaete Worms</span>
+            <span class="ctag">Sea Spiders</span><span class="ctag">Tripod Fish</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ZONE 5 — HADAL ZONE -->
+  <section class="zone-section" id="hadal">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6 reveal">
+          <img src="./hadal.jpeg"
+               alt="Hadal Zone" class="zone-big-img"/>
+        </div>
+
+        <div class="col-lg-6 reveal delay-2">
+          <div class="eyebrow">Zone Five</div>
+          <div class="zone-page-name">HADAL ZONE</div>
+          <div class="zone-page-depth">Hadalpelagic · 6,000 m+</div>
+          <p class="zone-page-desc">
+            Named after Hades, the Greek underworld — the hadal zone encompasses the ocean's deepest trenches.
+            Pressure here exceeds 1,100 atmospheres. The deepest point, Challenger Deep in the Mariana Trench,
+            sits at 11,034 m. Despite conditions that would crush a submarine like a tin can,
+            life persists here — tiny crustaceans called amphipods thrive in extraordinary numbers.
+          </p>
+
+          <div class="zone-data-grid">
+            <div class="zdchip"><div class="cl">Depth</div><div class="cv">6,000 m – 11,034 m</div></div>
+            <div class="zdchip"><div class="cl">Temperature</div><div class="cv">1°C – 4°C</div></div>
+            <div class="zdchip"><div class="cl">Light</div><div class="cv">Absolute zero</div></div>
+            <div class="zdchip"><div class="cl">Pressure</div><div class="cv">600 – 1,100 atm</div></div>
+          </div>
+
+          <div class="eyebrow mb-2">Creatures Found Here</div>
+          <div class="creature-tags">
+            <span class="ctag">Amphipods</span><span class="ctag">Snailfish</span>
+            <span class="ctag">Polychaete Worms</span><span class="ctag">Foraminifera</span>
+            <span class="ctag">Sea Cucumbers</span><span class="ctag">Copepods</span>
+            <span class="ctag">Bacteria Mats</span><span class="ctag">Hadal Shrimp</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-du">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-logo">DEPTHS <span>UNKNOWN</span></div>
+          <p class="footer-tagline">Discover the mysteries hidden beneath the waves.</p>
+          <span class="footer-badge">🌊 Deep Sea Edition</span>
+        </div>
+        <div class="col-6 col-lg-2 offset-lg-2">
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="zones.html">Ocean Zones</a></li>
+            <li><a href="animals.html">Creatures</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Zones</div>
+          <ul class="footer-links">
+            <li><a href="#sunlight">Sunlight</a></li>
+            <li><a href="#twilight">Twilight</a></li>
+            <li><a href="#midnight">Midnight</a></li>
+            <li><a href="#abyssal">Abyssal</a></li>
+            <li><a href="#hadal">Hadal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2025 Depths Unknown.</span>
+        <span class="footer-badge">11,034 m to the bottom 🌊</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+   
